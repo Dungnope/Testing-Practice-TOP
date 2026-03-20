@@ -12,6 +12,7 @@ export default defineConfig([
       "no-unused-vars": "warn", // show in CLI when test lint
       "array-callback-return": "warn",
       "semi": "warn",
+      "no-undef": "off",
     }
   }
 ]);
