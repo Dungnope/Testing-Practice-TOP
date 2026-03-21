@@ -92,6 +92,10 @@ describe("caesarCipher", () => {
   test("test capitalize", () => {
     expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
   });
+
+  test("test blank", () => {
+    expect(caesarCipher("", 3)).toBe("");
+  });
 });
 
 // ============TEST analyzeArray==============
