@@ -22,5 +22,3 @@ export function calculator(one, two) {
     divide: divide
   };
 }
-
-console.log(calculator(2, 0));

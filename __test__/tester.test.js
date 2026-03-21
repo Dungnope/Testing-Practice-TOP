@@ -68,7 +68,27 @@ describe("calculator", () => {
 // ============TEST caesarCipher==============
 
 describe("caesarCipher", () => {
+  test("test shifted", () => {
+    expect(caesarCipher("abc", 3)).toBe("def");
+  });
+
+  test("test with number", () => {
+    expect(caesarCipher("123", 3)).toBe("123");
+  });
+
+  test("test with other symbols", () => {
+    expect(caesarCipher("12@#!ab3", 3)).toBe("12@#!de3");
+  });
+
   test("test wrapping", () => {
-    expect(caesarCipher("xyz", 3)).toBe("abc");
+    expect(caesarCipher("xyz", 4)).toBe("bcd");
+  });
+
+  test("test itself", () => {
+    expect(caesarCipher("abc", 26)).toBe("abc");
+  });
+
+  test("test capitzl", () => {
+    expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
   });
 });

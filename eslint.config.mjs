@@ -13,6 +13,7 @@ export default defineConfig([
       "array-callback-return": "warn",
       "semi": "warn",
       "no-undef": "off",
+      "no-empty": "off"
     }
   }
 ]);
