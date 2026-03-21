@@ -1,3 +1,4 @@
+import { analyzeArray } from "../src/analyzeArray.js";
 import { caesarCipher } from "../src/caesarCipher.js";
 import { calculator } from "../src/calculator.js";
 import { capitalize } from "../src/capitalize.js";
@@ -69,7 +70,7 @@ describe("calculator", () => {
 
 describe("caesarCipher", () => {
   test("test shifted", () => {
-    expect(caesarCipher("abc", 3)).toBe("def");
+    expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
   });
 
   test("test with number", () => {
@@ -88,7 +89,29 @@ describe("caesarCipher", () => {
     expect(caesarCipher("abc", 26)).toBe("abc");
   });
 
-  test("test capitzl", () => {
+  test("test capitalize", () => {
     expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+  });
+});
+
+// ============TEST analyzeArray==============
+
+describe("analyzeArray", () => {
+  test("test normal array", () => {
+    expect(analyzeArray([1, 5, 6, 8, 9, 12, -4])).toEqual({
+      min: -4,
+      max: 12,
+      average: 5.3,
+      length: 7
+    });
+  });
+
+  test("test blank array", () => {
+    expect(analyzeArray([])).toEqual({
+      min: "no value to access",
+      max: "no value to access",
+      average: NaN,
+      length: 0
+    });
   });
 });
